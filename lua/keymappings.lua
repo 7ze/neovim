@@ -28,13 +28,6 @@ map('i', 'jj', '<ESC>')
 map('n', '<Leader>e', ':NvimTreeToggle<CR>')
 
 
--- better window navigation
-map('n', '<C-h>', '<C-w>h', { silent = true })
-map('n', '<C-j>', '<C-w>j', { silent = true })
-map('n', '<C-k>', '<C-w>k', { silent = true })
-map('n', '<C-l>', '<C-w>l', { silent = true })
-
-
 -- indenting
 map('v', '<', '<gv')
 map('v', '>', '>gv')
@@ -50,7 +43,17 @@ map('x', 'K', [[:move '<-2<CR>gv-gv']])
 map('x', 'J', [[:move '>+1<CR>gv-gv']])
 
 
--- autocomplete with tab
+-- completion
 map('i', '<expr><TAB>', [[pumvisible() ? '\<C-n>' : '\<TAB>']])
+map('i', '<expr><S-TAB>', [[pumvisible() ? '\<C-p>' : '\<S-TAB>']])
 
+
+
+local opt = { silent = true }
+
+-- better window navigation
+map('n', '<C-h>', '<C-w>h', opt)
+map('n', '<C-j>', '<C-w>j', opt)
+map('n', '<C-k>', '<C-w>k', opt)
+map('n', '<C-l>', '<C-w>l', opt)
 
