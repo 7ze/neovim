@@ -1,59 +1,53 @@
 --|  @keymappings.lua  |--
 
 
-local function map (mode, lhs, rhs, options)
-  if(options == nil) then
-    options = { noremap = true, silent = true }
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
-
+local utils = require('utils')
 
 -- leader key
 vim.g.mapleader = ' '
-map('n', '<Space>', '')
+utils.map('n', '<Space>', '')
 
 
 -- toggle higlight
-map('n', '<Leader>h', ':set hlsearch!<CR>')
+utils.map('n', '<Leader>h', ':set hlsearch!<CR>')
 
 
 -- easy escape
-map('i', 'jk', '<ESC>')
-map('i', 'kj', '<ESC>')
-map('i', 'jj', '<ESC>')
+utils.map('i', 'jk', '<ESC>')
+utils.map('i', 'kj', '<ESC>')
+utils.map('i', 'jj', '<ESC>')
 
 
 -- explorer
-map('n', '<Leader>e', ':NvimTreeToggle<CR>')
+utils.map('n', '<Leader>e', ':NvimTreeToggle<CR>')
 
 
 -- indenting
-map('v', '<', '<gv')
-map('v', '>', '>gv')
+utils.map('v', '<', '<gv')
+utils.map('v', '>', '>gv')
 
 
 -- switch buffer
-map('n', '<TAB>', ':bnext<CR>')
-map('n', '<S-TAB>', ':bprevious<CR>')
+utils.map('n', '<TAB>', ':bnext<CR>')
+utils.map('n', '<S-TAB>', ':bprevious<CR>')
 
 
 -- move lines in visual mode
-map('x', 'K', [[:move '<-2<CR>gv-gv']])
-map('x', 'J', [[:move '>+1<CR>gv-gv']])
+utils.map('x', 'K', [[:move '<-2<CR>gv-gv']])
+utils.map('x', 'J', [[:move '>+1<CR>gv-gv']])
 
 
 -- completion
-map('i', '<expr><TAB>', [[pumvisible() ? '\<C-n>' : '\<TAB>']])
-map('i', '<expr><S-TAB>', [[pumvisible() ? '\<C-p>' : '\<S-TAB>']])
+utils.map('i', '<expr><TAB>', [[pumvisible() ? '\<C-n>' : '\<TAB>']])
+utils.map('i', '<expr><S-TAB>', [[pumvisible() ? '\<C-p>' : '\<S-TAB>']])
 
 
 
 local opt = { silent = true }
 
 -- better window navigation
-map('n', '<C-h>', '<C-w>h', opt)
-map('n', '<C-j>', '<C-w>j', opt)
-map('n', '<C-k>', '<C-w>k', opt)
-map('n', '<C-l>', '<C-w>l', opt)
+utils.map('n', '<C-h>', '<C-w>h', opt)
+utils.map('n', '<C-j>', '<C-w>j', opt)
+utils.map('n', '<C-k>', '<C-w>k', opt)
+utils.map('n', '<C-l>', '<C-w>l', opt)
 
