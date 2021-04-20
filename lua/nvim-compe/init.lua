@@ -1,4 +1,4 @@
---| nvim-compe/init.lua |--
+--| nvim-compe/@init.lua |--
 
 local utils = require('utils')
 

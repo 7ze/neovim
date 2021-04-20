@@ -1,3 +1,5 @@
+--| utils/@init.lua |--
+
 local utils = {}
 
 function utils.opt (scope, key, value)
