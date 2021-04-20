@@ -1,6 +1,5 @@
 --| nvim-compe/init.lua |--
 
-
 local utils = require('utils')
 
 vim.o.completeopt = "menuone,noselect"
