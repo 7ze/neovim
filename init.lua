@@ -2,5 +2,6 @@
 
 
 require('plugins')
-require('keymappings')
+require('maps')
 require('nvim-compe')
+
