@@ -1,4 +1,4 @@
---|  @keymappings.lua  |--
+--|  @maps.lua  |--
 
 local utils = require('utils')
 

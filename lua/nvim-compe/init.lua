@@ -2,7 +2,7 @@
 
 local utils = require('utils')
 
-vim.o.completeopt = "menuone,noselect"
+vim.o.completeopt = 'menuone,noselect'
 
 require'compe'.setup {
   enabled = true;
@@ -46,27 +46,27 @@ end
 --- jump to prev/next snippet's placeholder
 _G.tab_complete = function()
   if vim.fn.pumvisible() == 1 then
-    return t "<C-n>"
+    return t '<C-n>'
   elseif vim.fn.call("vsnip#available", {1}) == 1 then
-    return t "<Plug>(vsnip-expand-or-jump)"
+    return t '<Plug>(vsnip-expand-or-jump)'
   elseif check_back_space() then
-    return t "<Tab>"
+    return t '<Tab>'
   else
     return vim.fn['compe#complete']()
   end
 end
 _G.s_tab_complete = function()
   if vim.fn.pumvisible() == 1 then
-    return t "<C-p>"
-  elseif vim.fn.call("vsnip#jumpable", {-1}) == 1 then
-    return t "<Plug>(vsnip-jump-prev)"
+    return t '<C-p>'
+  elseif vim.fn.call('vsnip#jumpable', {-1}) == 1 then
+    return t '<Plug>(vsnip-jump-prev)'
   else
-    return t "<S-Tab>"
+    return t '<S-Tab>'
   end
 end
 
-utils.map("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-utils.map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-utils.map("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-utils.map("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+utils.map('i', '<Tab>', 'v:lua.tab_complete()', {expr = true})
+utils.map('s', '<Tab>', 'v:lua.tab_complete()', {expr = true})
+utils.map('i', '<S-Tab>', 'v:lua.s_tab_complete()', {expr = true})
+utils.map('s', '<S-Tab>', 'v:lua.s_tab_complete()', {expr = true})
 
