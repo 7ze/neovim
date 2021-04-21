@@ -19,4 +19,5 @@ return require('packer').startup( function()
   use 'kabouzeid/nvim-lspinstall'		-- language servers installer
   use 'hrsh7th/nvim-compe'			-- autocompletion
   use 'hrsh7th/vim-vsnip' 			-- snippets
+  use 'kyazdani42/nvim-web-devicons'
 end )
