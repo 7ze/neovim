@@ -17,5 +17,6 @@ return require('packer').startup( function()
   use 'kyazdani42/nvim-tree.lua'		-- explorer
   use 'neovim/nvim-lspconfig'			-- built-in LSP client
   use 'kabouzeid/nvim-lspinstall'		-- language servers installer
-  use 'hrsh7th/nvim-compe'			-- autocompletion plugin
+  use 'hrsh7th/nvim-compe'			-- autocompletion
+  use 'hrsh7th/vim-vsnip' 			-- snippets
 end )
