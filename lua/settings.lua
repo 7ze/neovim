@@ -30,7 +30,8 @@ o.clipboard = 'unnamedplus'  -- copy paste between vim and everything else
 o.termguicolors = true       -- set term gui colors
 o.t_Co = '256'               -- support 256 colors
 o.showmode = false           -- disable the mode being shown
-
+o.backup = false
+o.writebackup = false
 
 -- buffer-local options
 
