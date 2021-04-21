@@ -1,5 +1,6 @@
 --| @init.lua |--
 
-
 require('plugins')
-require('keymappings')
+require('maps')
+require('nvim-compe')
+require('lsp')
