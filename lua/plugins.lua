@@ -24,5 +24,8 @@ function(use)
   -- explorer and icons
   use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'
+
+  -- colorschemes
+  use 'christianchiarulli/nvcode-color-schemes.vim'
 end
 )

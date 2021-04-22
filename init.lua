@@ -9,3 +9,5 @@ require('lsp')
 
 require('settings')
 require('nvim_tree')
+
+vim.cmd [[ colorscheme lunar ]]
