@@ -1,6 +1,7 @@
 --| @init.lua |--
 
 require('plugins')
+require('file_icons')
 require('maps')
 
 require('nvim-compe')
