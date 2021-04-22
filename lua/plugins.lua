@@ -11,13 +11,18 @@ if fn.empty(fn.glob(install_path)) > 0 then
     execute 'packadd packer.nvim'
 end
 
--- plugins list
-return require('packer').startup( function() 
-  use 'wbthomason/packer.nvim'			-- package manager
-  use 'kyazdani42/nvim-tree.lua'		-- explorer
-  use 'neovim/nvim-lspconfig'			-- built-in LSP client
-  use 'kabouzeid/nvim-lspinstall'		-- language servers installer
-  use 'hrsh7th/nvim-compe'			-- autocompletion
-  use 'hrsh7th/vim-vsnip' 			-- snippets
+return require('packer').startup(
+function(use)
+  use 'wbthomason/packer.nvim'
+
+  -- lsp and completion
+  use 'neovim/nvim-lspconfig'
+  use 'kabouzeid/nvim-lspinstall'
+  use 'hrsh7th/nvim-compe'
+  use 'hrsh7th/vim-vsnip'
+
+  -- explorer and icons
+  use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'
-end )
+end
+)
