@@ -29,8 +29,10 @@ function(use)
   -- explorer and icons
   use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'
+  use 'akinsho/nvim-bufferline.lua'
 
   -- colorschemes
   use 'christianchiarulli/nvcode-color-schemes.vim'
+  -- use "norcalli/nvim-colorizer.lua" #color visualizer
 end
 )
