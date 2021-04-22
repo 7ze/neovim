@@ -15,4 +15,5 @@ require('nvim_tree')
 
 require('nvim-compe')
 require('lsp')
+require('nvim-telescope')
 

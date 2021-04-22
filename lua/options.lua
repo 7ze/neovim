@@ -5,7 +5,6 @@ local b = vim.bo
 local w = vim.wo
 local cmd = vim.cmd
 
-local indent = 2
 
 cmd [[ filetype plugin indent on ]]
 cmd [[ set iskeyword+=- ]]     -- treats dash seperated words as a word
@@ -34,9 +33,9 @@ o.writebackup = false
 -- buffer-local options
 
 b.expandtab = true           -- converts tabs to spaces
-b.shiftwidth = indent
-b.smartindent = true
-b.tabstop = indent
+b.shiftwidth = 2
+b.smartindent = false
+b.tabstop = 2
 
 
 -- window-local options
