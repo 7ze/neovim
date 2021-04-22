@@ -1,13 +1,18 @@
 --| @init.lua |--
 
 require('plugins')
-require('file_icons')
+require('globals')
+
+-- global settings
+vim.cmd [[luafile ~/.config/nvim/settings.lua]]
+
+require('options')
 require('maps')
+
+require('file_icons')
+require('colorscheme')
+require('nvim_tree')
 
 require('nvim-compe')
 require('lsp')
 
-require('settings')
-require('nvim_tree')
-
-vim.cmd [[ colorscheme lunar ]]
