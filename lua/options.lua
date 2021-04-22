@@ -1,4 +1,4 @@
---| @settings.lua |--
+--| @options.lua |--
 
 local o = vim.o
 local b = vim.bo
@@ -7,16 +7,15 @@ local cmd = vim.cmd
 
 local indent = 2
 
-cmd [[syntax enable]]
-cmd [[filetype plugin indent on]]
-cmd [[set iskeyword+=-]]     -- treats dash seperated words as a word
+cmd [[ filetype plugin indent on ]]
+cmd [[ set iskeyword+=- ]]     -- treats dash seperated words as a word
 
 
 -- global options
 
-o.hidden = true
+o.hidden = O.hide_buffers
 o.ignorecase = true
-o.scrolloff = 4
+o.scrolloff = 20
 o.pumheight = 10             -- makes popup menu smaller
 o.cmdheight = 2              -- more space for messages
 o.fileencoding = 'utf-8'
@@ -27,7 +26,6 @@ o.showtabline = 2            -- show buffers
 o.timeoutlen = 100
 o.updatetime = 300
 o.clipboard = 'unnamedplus'  -- copy paste between vim and everything else
-o.termguicolors = true       -- set term gui colors
 o.t_Co = '256'               -- support 256 colors
 o.showmode = false           -- disable the mode being shown
 o.backup = false
@@ -43,5 +41,6 @@ b.tabstop = indent
 
 -- window-local options
 
-w.number = false             -- set line numbers
-w.relativenumber = false     -- relative line numbers
+w.number = O.line_numbers    			-- set line numbers
+w.relativenumber = O.relative_line_numbers 	-- relative line numbers
+w.numberwidth = 2
