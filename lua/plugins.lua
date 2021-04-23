@@ -14,6 +14,7 @@ end
 return require('packer').startup(
 function(use)
   use 'wbthomason/packer.nvim'
+  use {"lukas-reineke/indent-blankline.nvim", branch = "lua"}
 
   -- lsp and completion
   use 'neovim/nvim-lspconfig'
@@ -37,5 +38,9 @@ function(use)
   -- colorschemes
   use 'christianchiarulli/nvcode-color-schemes.vim'
   -- use "norcalli/nvim-colorizer.lua" #color visualizer
+
+  -- statusline
+  use "glepnir/galaxyline.nvim"
+
 end
 )

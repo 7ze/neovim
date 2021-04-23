@@ -11,7 +11,7 @@
 
 -- O is the global object
 O.auto_complete = true
-O.colorscheme = 'lunar'
+O.colorscheme = 'onedark'
 O.line_numbers = true
 O.relative_line_numbers = true
 O.treesitter.ensure_installed = 'all'

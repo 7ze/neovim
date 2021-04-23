@@ -13,6 +13,7 @@ require('file_icons')
 require('colorscheme')
 require('nvim_tree')
 require('nvim-bufferline')
+require('nvim-galaxyline')
 
 require('nvim-compe')
 require('lsp')
