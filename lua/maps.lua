@@ -44,3 +44,7 @@ utils.map('n', '<C-h>', '<C-w>h', opt)
 utils.map('n', '<C-j>', '<C-w>j', opt)
 utils.map('n', '<C-k>', '<C-w>k', opt)
 utils.map('n', '<C-l>', '<C-w>l', opt)
+
+-- telescope
+utils.map("n", "<Leader>f", [[:Telescope<CR>]])
+utils.map("n", "<Leader>m", [[:Telescope media_files<CR>]])

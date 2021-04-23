@@ -1,5 +1,6 @@
 --| nvim-telescope/@init.lua |--
 
+require('telescope').load_extension('media_files')
 local actions =  require('telescope.actions')
 
 require('telescope').setup{
@@ -56,6 +57,21 @@ require('telescope').setup{
         ['<CR>'] = actions.select_default + actions.center,
         ['<Esc>'] = actions.close,
       }
+    },
+    extensions = {
+      media_files = {
+        filetypes = {"png", "webp", "jpg", "jpeg"},
+        find_cmd = "rg"
+      }
     }
   }
 }
+
+
+-- highlights
+local cmd = vim.cmd
+
+cmd "hi TelescopeBorder   guifg=#2a2e36"
+cmd "hi TelescopePromptBorder   guifg=#2a2e36"
+cmd "hi TelescopeResultsBorder  guifg=#2a2e36"
+cmd "hi TelescopePreviewBorder  guifg=#525865"
