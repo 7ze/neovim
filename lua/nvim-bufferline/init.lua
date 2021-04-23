@@ -1,4 +1,5 @@
--- colors for active , inactive uffer tabs
+--| nvim-bufferline/@init.lua |--
+
 require "bufferline".setup {
     options = {
         buffer_close_icon = "",

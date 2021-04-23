@@ -1,3 +1,5 @@
+--| @file_icons.lua |--
+
 require "nvim-web-devicons".setup {
     override = {
         html = {
