@@ -30,7 +30,7 @@ utils.map('x', 'K', [[:move '<-2<CR>gv-gv']])
 utils.map('x', 'J', [[:move '>+1<CR>gv-gv']])
 
 -- misc
-utils.map('i', '<C-s>', ':w<CR>')
+utils.map('n', '<C-s>', ':w<CR>')
 utils.map('i', '<C-o>', '<Esc>o')
 
 -- completion
