@@ -14,3 +14,5 @@ O.auto_complete = true
 O.colorscheme = 'lunar'
 O.line_numbers = true
 O.relative_line_numbers = true
+O.treesitter.ensure_installed = 'all'
+O.treesitter.highlight = true

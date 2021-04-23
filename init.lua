@@ -16,5 +16,6 @@ require('nvim-bufferline')
 
 require('nvim-compe')
 require('lsp')
+require('nvim-treesitter')
 require('nvim-telescope')
 

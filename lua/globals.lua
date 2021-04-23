@@ -14,4 +14,9 @@ O = {
   line_numbers = true,
   relative_line_numbers = true,
   colorscheme = 'lunar',
+
+   treesitter = {
+        ensure_installed = 'all',
+        highlight = {enabled = true},
+   },
 }

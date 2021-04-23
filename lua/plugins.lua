@@ -26,6 +26,9 @@ function(use)
   use "nvim-lua/plenary.nvim"
   use "nvim-telescope/telescope.nvim"
 
+  -- Treesitter
+  use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+
   -- explorer and icons
   use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'

@@ -35,7 +35,7 @@ utils.map('i', '<expr><TAB>', [[pumvisible() ? '\<C-n>' : '\<TAB>']], opt)
 utils.map('i', '<expr><S-TAB>', [[pumvisible() ? '\<C-p>' : '\<S-TAB>']], opt)
 
 -- better window navigation
-local opt = { noremap = false }
+opt = { noremap = false }
 utils.map('n', '<C-h>', '<C-w>h', opt)
 utils.map('n', '<C-j>', '<C-w>j', opt)
 utils.map('n', '<C-k>', '<C-w>k', opt)
