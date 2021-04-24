@@ -13,6 +13,6 @@ require "bufferline".setup {
         enforce_regular_tabs = true,
         view = "multiwindow",
         show_buffer_close_icons = true,
-        separator_style = "slant"
+        separator_style = "thin"
     }
 }
